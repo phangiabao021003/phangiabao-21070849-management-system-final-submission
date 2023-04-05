@@ -1,0 +1,42 @@
+<%= form_with(model: service) do |form| %>
+<% if service.errors.any? %>
+<div id="error_explanation" class="bg-red-50 p-6 rounded text-red-800">
+  <h2 class="text-lg font-semibold mb-3"><%= pluralize(service.errors.count, "error") %> prohibited this service from being saved:</h2>
+
+  <ul class="list-disc leading-relaxed">
+    <% service.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+  <div class="mb-6">
+        <%= form.label :ServiceName, class: label_class %>
+          <%= form.text_field :ServiceName, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :ServiceNumber, class: label_class %>
+          <%= form.text_field :ServiceNumber, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :Cost, class: label_class %>
+          <%= form.number_field :Cost, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :ClientID_id, class: label_class %>
+          <%= form.text_field :ClientID_id, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :Phone_id, class: label_class %>
+          <%= form.text_field :Phone_id, class: input_class %>
+      </div>
+
+<%= form.submit class: button_class(theme: 'primary') %>
+
+<% if service.persisted? %>
+<%= link_to "Cancel", service, class: "text-neutral-700 underline inline-block ml-3" %>
+<% else %>
+<%= link_to "Cancel", services_path, class:  "text-neutral-700 underline inline-block ml-3" %>
+<% end %>
+<% end %>

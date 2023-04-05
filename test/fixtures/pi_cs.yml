@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Staffname: MyString
+  StaffID: 1
+  StaffPhone: MyString
+  DateTransaction: 2023-03-15
+  ClientName: MyString
+  ClientID: one
+
+two:
+  Staffname: MyString
+  StaffID: 1
+  StaffPhone: MyString
+  DateTransaction: 2023-03-15
+  ClientName: MyString
+  ClientID: two

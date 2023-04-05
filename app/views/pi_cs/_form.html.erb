@@ -1,0 +1,46 @@
+<%= form_with(model: pi_c) do |form| %>
+<% if pi_c.errors.any? %>
+<div id="error_explanation" class="bg-red-50 p-6 rounded text-red-800">
+  <h2 class="text-lg font-semibold mb-3"><%= pluralize(pi_c.errors.count, "error") %> prohibited this pi_c from being saved:</h2>
+
+  <ul class="list-disc leading-relaxed">
+    <% pi_c.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+  <div class="mb-6">
+        <%= form.label :Staffname, class: label_class %>
+          <%= form.text_field :Staffname, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :StaffID, class: label_class %>
+          <%= form.number_field :StaffID, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :StaffPhone, class: label_class %>
+          <%= form.text_field :StaffPhone, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :DateTransaction, class: label_class %>
+          <%= form.date_field :DateTransaction, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :ClientName, class: label_class %>
+          <%= form.text_field :ClientName, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :ClientID_id, class: label_class %>
+          <%= form.text_field :ClientID_id, class: input_class %>
+      </div>
+
+<%= form.submit class: button_class(theme: 'primary') %>
+
+<% if pi_c.persisted? %>
+<%= link_to "Cancel", pi_c, class: "text-neutral-700 underline inline-block ml-3" %>
+<% else %>
+<%= link_to "Cancel", pi_cs_path, class:  "text-neutral-700 underline inline-block ml-3" %>
+<% end %>
+<% end %>

@@ -1,0 +1,41 @@
+<div class="max-w-3xl mx-auto px-4">
+  <div class="flex items-center justify-between">
+    <h1 class="flex-1 font-bold text-3xl">Pi_c</h1>
+
+    <div class="flex-wrap lg:flex items-center lg:space-x-3">
+      <%= link_to pi_cs_path, class: button_class(theme: "transparent") do %>
+      All Pi_cs
+      <% end %>
+      <%= link_to edit_pi_c_path(@pi_c), class: button_class(theme:"primary") do %>
+      Edit
+      <% end %>
+    </div>
+  </div>
+
+  <ul class="text-slate-700">
+      <li>
+        <p class="font-semibold">Staffname:</p>
+        <p><%= @pi_c.Staffname %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Staffid:</p>
+        <p><%= @pi_c.StaffID %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Staffphone:</p>
+        <p><%= @pi_c.StaffPhone %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Datetransaction:</p>
+        <p><%= @pi_c.DateTransaction %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Clientname:</p>
+        <p><%= @pi_c.ClientName %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Clientid:</p>
+        <p><%= @pi_c.ClientID %></p>
+      </li>
+  </ul>
+</div>
