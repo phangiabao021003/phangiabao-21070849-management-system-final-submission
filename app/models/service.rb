@@ -1,4 +1,4 @@
 class Service < ApplicationRecord
-  belongs_to :ClientID
-  belongs_to :Phone
+  belongs_to :clients
+
 end

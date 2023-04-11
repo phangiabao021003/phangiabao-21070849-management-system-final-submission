@@ -1,3 +1,4 @@
 class PiC < ApplicationRecord
-  belongs_to :ClientID
+  belongs_to :clients
+
 end
